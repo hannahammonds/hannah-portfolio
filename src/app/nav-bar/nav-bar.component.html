@@ -1,0 +1,41 @@
+<div class="card text-center" class="bg-9575CD">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a style="cursor:pointer;" class="nav-link active" (click)="goToTab('About')">About</a>
+      </li>
+      <li class="nav-item">
+        <a style="cursor:pointer;" class="nav-link" (click)="goToTab('Portfolio')">Portfolio</a>
+        <app-portfolio *ngIf="activeTab === 'Portfolio'"></app-portfolio>
+      </li>
+      <li class="nav-item">
+        <a style="cursor:pointer;" class="nav-link" (click)="goToTab('Contact')">Contact</a>
+        <app-contact *ngIf="activeTab === 'Contact'"></app-contact>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <div class="card-body"class="max-width mx-auto" *ngIf="activeTab === 'About'">
+    <h1 class="card-title">Hannah Hoy Hammonds</h1>
+    <img
+      src="https://www.flickr.com/photos/191200056@N02/51750361595/in/dateposted-public/"
+      alt="profile picture"
+      class="img-responsive"
+      style="max-height: 100px"
+    />
+    <div class="container">
+    <p class="card-text" class="text-justify" >Currently a classroom teacher, I was inspired to learn how to code after my first year of coaching the Youth Coding League. The students I coached were motivated self-learners and showed me that anyone can jump in and do hard things. Combing my love for using EdTech in the classroom and my passion for life-long learning I am looking for new professional challenges. </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h5 text="text-left">Education</h5>
+    <ul>
+      <li class="text-left">B.A. in Elementary Education with an emphasis in Social and Behavioral Studies, Centre College, KY May 2003</li>
+      <li class="text-left">Masters of Elementary Education, Information Communications Technology focus, Murray State University, KY December 2014</li>
+      <li class="text-left"><b>Codefi Front End Web Development Class, Codefi Cape Girardeau, MO, September 2021</b></li>
+    </ul>
+    <br>
+    <hr>
+  </div>
+</div>
