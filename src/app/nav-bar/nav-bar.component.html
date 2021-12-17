@@ -2,40 +2,89 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a style="cursor:pointer;" class="nav-link active" (click)="goToTab('About')">About</a>
+        <a style="cursor:pointer;" class="nav-link" [ngClass]="{active: activeTab === 'About'}" (click)="goToTab('About')">About</a>
       </li>
       <li class="nav-item">
-        <a style="cursor:pointer;" class="nav-link" (click)="goToTab('Portfolio')">Portfolio</a>
-        <app-portfolio *ngIf="activeTab === 'Portfolio'"></app-portfolio>
+        <a style="cursor:pointer;" class="nav-link" [ngClass]="{active: activeTab === 'Portfolio'}"(click)="goToTab('Portfolio')">Portfolio</a>
+
       </li>
       <li class="nav-item">
-        <a style="cursor:pointer;" class="nav-link" (click)="goToTab('Contact')">Contact</a>
-        <app-contact *ngIf="activeTab === 'Contact'"></app-contact>
+        <a style="cursor:pointer;" class="nav-link" [ngClass]="{active: activeTab === 'Connect'}"(click)="goToTab('Connect')">Connect</a>
+
       </li>
     </ul>
   </div>
   <br>
-  <div class="card-body"class="max-width mx-auto" *ngIf="activeTab === 'About'">
-    <h1 class="card-title">Hannah Hoy Hammonds</h1>
-    <img
-      src="https://www.flickr.com/photos/191200056@N02/51750361595/in/dateposted-public/"
-      alt="profile picture"
-      class="img-responsive"
-      style="max-height: 100px"
-    />
-    <div class="container">
-    <p class="card-text" class="text-justify" >Currently a classroom teacher, I was inspired to learn how to code after my first year of coaching the Youth Coding League. The students I coached were motivated self-learners and showed me that anyone can jump in and do hard things. Combing my love for using EdTech in the classroom and my passion for life-long learning I am looking for new professional challenges. </p>
+  <div>
+    <app-portfolio *ngIf="activeTab === 'Portfolio'"></app-portfolio>
+    <app-contact *ngIf="activeTab === 'Connect'"></app-contact>
+    <div style="background-color: #D1C4E9" class="card-body" class="max-width mx-auto" *ngIf="activeTab === 'About'">
+      <h1 class="card-title" style="text-align: center; font-family: 'Pacifico', cursive; padding: 5px" >Hannah Hoy Hammonds</h1>
+      <div style="background-color: #9575CD; margin-top: 10px" class="container d-flex">
+        <img src="url(../../../../assets/profile pic.jpg" alt="profile picture" class="img-responsive"
+          style="max-height: 100px; text-align: left; margin-right: 10px; margin-top: 10px; margin-bottom: 10px" />
+        <p class="card-text" class="text-justify" style="margin-top: 10px">Currently a classroom teacher, I was inspired to learn how to code
+          after my first year of coaching the Youth Coding League. The students I coached were motivated self-learners
+          and showed me that anyone can jump in and do hard things. Combing my love for using EdTech in the classroom
+          and my passion for life-long learning I am looking for new professional challenges. </p>
+      </div>
+      <br>
+      <hr>
+      <!-- <div style="background-color: #D1C4E9">
+        <h5 text="text-left">Education</h5>
+        <ul>
+          <li class="text-left">B.A. in Elementary Education with an emphasis in Social and Behavioral Studies, Centre
+            College, KY May 2003</li>
+          <li class="text-left">Masters of Elementary Education, Information Communications Technology focus, Murray
+            State University, KY December 2014</li>
+          <li class="text-left"><b>Codefi Front End Web Development Class, Codefi Cape Girardeau, MO, September 2021</b>
+          </li>
+        </ul>
+        <br>
+        <hr>
+      </div> -->
+
     </div>
-    <br>
-    <hr>
-    <br>
-    <h5 text="text-left">Education</h5>
-    <ul>
-      <li class="text-left">B.A. in Elementary Education with an emphasis in Social and Behavioral Studies, Centre College, KY May 2003</li>
-      <li class="text-left">Masters of Elementary Education, Information Communications Technology focus, Murray State University, KY December 2014</li>
-      <li class="text-left"><b>Codefi Front End Web Development Class, Codefi Cape Girardeau, MO, September 2021</b></li>
-    </ul>
-    <br>
-    <hr>
   </div>
-</div>
+
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <h5 class="text-left" style="color: #4527A0; background-color: #D1C4E9">Tech</h5>
+      </div>
+      <div class="col">
+        <h5 class="text-left" style="color: #4527A0; background-color: #D1C4E9">Personal Interests</h5>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col align-self-start">
+        <ul class="text-left">
+            <li>Angular</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Typescript</li>
+            <li>Bootstrap</li>
+            <li>Visual Studio Code</li>
+          </ul>
+      </div>
+      <div class="col">
+        <ul class="text-left">
+          <li>Sponsored Tech Know Kids Club at Clark Elementary, 4 years</li>
+          <li> Coached <a href="https://www.youthcodingleague.com/">Youth Coding League</a> at Clark Elementary School, 2 years</li>
+          <li>Designed websites:
+            <br>
+            <a href="www.korugardenscsa.com">Koru Gardens</a>
+            <br>
+            <a href="www.firstprespaducah.org">First Presbyterian Church Paducah</a></li>
+            <li><a href="https://github.com/hannahammonds/to-plant">To-Plant App:</a>
+              <br>Users can create a list of what to plant and when in their garden
+              </li>
+            <li><a href="https://github.com/jludovissie/GetFriended">Get Friended App:</a>
+            <br>Social Media app created with colleagues
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap');
+a {
+  color: #5E35B1;
+}
+a:link {
+  color: #5E35B1;
+}
+a:visited {
+  color: #4527A0;
+}
+a:hover {
+  color: #673AB7;
+}
+a:active {
+  color: #5E35B1;
+}
